@@ -59,8 +59,8 @@ def make_moudle():
             
         while True:
             file_input=input("请插入需要总结的内容模板,返回上传请输入0:")
-        #path=C:/Users/amaxz/Desktop/yeartest/file_input #??
-            path="C:/Users/27019/Desktop/test/"
+        #path=C:/Users/Desktop/yeartest/file_input #?? #change file path to use
+            path="C:/Users/Desktop/test/"
             if not file_input:
                 print("模板名称不能为空")
             elif file_input=="0":
@@ -108,4 +108,5 @@ if __name__=="__main__":
             print("无效的输入！")
         time.sleep(2)
         os.system("cls")
+
         continue
