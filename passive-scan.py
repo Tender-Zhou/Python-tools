@@ -5,10 +5,10 @@ alive_hosts=set()
 
 def packet_callback(packet):
     ip=None
-    if packet.hsalayer(ARP): #check Arp packet,the packet must be ARP
+    if packet.haslayerha'slayer(ARP): #check Arp packet,the packet mu
         ip=packet[ARP].psrc #get ip address
         mac=packet[ARP].hwsrc #get mac address
-    elif packet.hsalayer(IP): #check IP packet,the packet must be IP
+    elif packet.haslayer(IP): #check IP packet,the packet must be IP
         ip=packet[IP].src
     
     if ip and ip not in alive_hosts: #can not found any ip in live host
@@ -45,3 +45,4 @@ if __name__=="__main__":
 #User must install Npcap first,and use scapy model in python
 #https://nmap.org/npcap/
 #instyall scapy: pip install scapy
+
